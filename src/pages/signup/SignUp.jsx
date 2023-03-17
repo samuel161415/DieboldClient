@@ -1,15 +1,13 @@
 import './signup.css'
 import { useState } from 'react'
-import { Navigate } from "react-router-dom";
-import { person } from '../../assets/sampleData';
 import { Distric } from '../../assets/sampleData';
 import { userRequest } from '../../requestMethods';
+import { Link } from 'react-router-dom';
+import PersonIcon from '@mui/icons-material/Person';
 
 const SingUp=()=>{
 
     const [error,setError]=useState(null)
-    const [success,setSuccess]=useState(null)
-    const Admin=['false','true']
 
     const handleSubmit=async(event)=>{
         event.preventDefault();
@@ -40,6 +38,7 @@ const SingUp=()=>{
         <div className="signup">
           
              <div className="form_box_signup">
+             <Link to='/'><p id="logout"> <PersonIcon /></p></Link>
              <form
                 onSubmit={(event) => handleSubmit(event)} 
                 className='box_signup'>

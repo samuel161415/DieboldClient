@@ -7,7 +7,7 @@ function Navbar() {
         <div className="navBar">
         
                 <img src={icon} className='icon' alt="lldk"/>
-                <h2>DIEBOLD MONITORING</h2>
+                <h2 style={{textDecoration:'none'}}>DIEBOLD MONITORING</h2>
 
          
              </div>

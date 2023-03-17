@@ -1,14 +1,11 @@
 import './update.css'
 import { useState } from 'react'
-import { Navigate } from "react-router-dom";
-import { person } from '../../assets/sampleData';
 import { Distric } from '../../assets/sampleData';
 import { userRequest } from '../../requestMethods';
+import { Link } from 'react-router-dom';
+import PersonIcon from '@mui/icons-material/Person';
 const Update=()=>{
-    const [user,setUser]=useState(null)
-    const [error,setError]=useState(null)
 
-    const Admin=['true','false']
     const handleSubmit=async(event)=>{
         const obj={}
       
@@ -49,6 +46,7 @@ const Update=()=>{
              <form
                 onSubmit={(event) => handleSubmit(event)} 
                 className='box_update'>
+                    <Link to='/'><p id="logout"> <PersonIcon /></p></Link>
                     <h1 id='update_title'>UPDATE</h1>
                     <input type='email' placeholder="Outlook username" className='update_input' name='username'/>
                     <input type="password" className="update_input" placeholder="password" name='password' />

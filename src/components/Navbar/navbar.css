@@ -5,10 +5,11 @@
     background-color: #AACB73;
     margin: 10px;
     display:flex;
-    justify-content:center;
+    justify-content:start;
     align-items: center;
     
 }
+
 /* .left{
     flex:3;
     display:flex;

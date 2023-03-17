@@ -36,7 +36,7 @@ function LeftPage(props){
      
          
       try{
-         console.log('called');
+        
          const res= await userRequest.get('/status');
       
          setTempResult(res.data)

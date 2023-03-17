@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from "react"
 import { useLocation } from "react-router-dom"
-import axios from "axios"
+import { names } from '../../assets/atmNames';
 import { userRequest } from "../../requestMethods"
 import './singleAtm.css'
 import DetailStatus from "../../components/detail/DetailStatus"
-import LeftPage from "../../components/LeftPage/LeftPage"
-
+import PersonIcon from '@mui/icons-material/Person';
+import { Link } from "react-router-dom";
 function SingleAtm(){
     const location=useLocation()
     const {state}=location
@@ -37,7 +37,8 @@ function SingleAtm(){
     },[state.result,state.terminalId])
  return(
     <div className="single">
-        <h2>{atmTerminal}</h2>
+        <Link to='/'><p  id="logout"> <PersonIcon /></p></Link>
+        <h2>{names[atmTerminal]}</h2>
         <div className="singleAtm">
         <div className="single_left">
             <h2>Fitness Status</h2>
@@ -49,11 +50,11 @@ function SingleAtm(){
            {atmCondition.length>0? <DetailStatus detail={atmCondition[1]} />
             :<p></p>}
         </div>
-        <div className="single_right">
+        {/* <div className="single_right">
          <h2>Sensor Status</h2>
           {atmCondition.length>0? <DetailStatus detail={atmCondition[2]} />
             :<p></p>}
-        </div>
+        </div> */}
     </div>
     
     </div>
