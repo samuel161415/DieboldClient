@@ -46,7 +46,7 @@ const Update=()=>{
              <form
                 onSubmit={(event) => handleSubmit(event)} 
                 className='box_update'>
-                    <Link to='/'><p id="logout"> <PersonIcon /></p></Link>
+                    <Link to='/'><p id="logout"> <PersonIcon /><span>logout</span></p></Link>
                     <h1 id='update_title'>UPDATE</h1>
                     <input type='email' placeholder="Outlook username" className='update_input' name='username'/>
                     <input type="password" className="update_input" placeholder="password" name='password' />

@@ -4,10 +4,14 @@ import { Distric } from '../../assets/sampleData';
 import { userRequest } from '../../requestMethods';
 import { Link } from 'react-router-dom';
 import PersonIcon from '@mui/icons-material/Person';
+import { Navigate,useNavigate } from "react-router-dom";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const SingUp=()=>{
+  const navigate = useNavigate();
 
     const [error,setError]=useState(null)
+    const [back,setBack]=useState(false)
 
     const handleSubmit=async(event)=>{
         event.preventDefault();
@@ -34,11 +38,17 @@ const SingUp=()=>{
           alert('user is not created. Try using different username')
         }
       }
+
+       const handlBack=()=>{
+        setBack(true)
+      }
     return(
         <div className="signup">
-          
+             {/* {back && Navigate(-1)} */}
+              <button onClick={() => navigate(-1)} className="back" > <ArrowBackIosIcon sx={{color:'black'}} /></button>
              <div className="form_box_signup">
-             <Link to='/'><p id="logout"> <PersonIcon /></p></Link>
+            
+             <Link to='/'><p id="logout"> <PersonIcon /><span>logout</span></p></Link>
              <form
                 onSubmit={(event) => handleSubmit(event)} 
                 className='box_signup'>

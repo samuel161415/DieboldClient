@@ -2,10 +2,10 @@ import './login.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Navigate } from "react-router-dom";
-import { person } from '../../assets/sampleData';
 import { userRequest } from '../../requestMethods';
 
 const Login=()=>{
+    
     const[val,setVal]=useState(false)
     const [user,setUser]=useState(null)
     const [error,setError]=useState(null)

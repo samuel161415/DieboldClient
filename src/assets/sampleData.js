@@ -13,6 +13,7 @@ export const Distric=[
     'Mekele',
     'Central_Addis',
     'West_Addis',
+    'East_Addis',
     'Head_Office',
 ]
 

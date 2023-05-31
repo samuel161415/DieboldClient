@@ -11,12 +11,15 @@
   }
   .app_right_wrapper{
     flex:3;
+    
   
   }
   #logout{
     position: absolute;
     top:0;
     right:10px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media screen and (max-width:600px) {

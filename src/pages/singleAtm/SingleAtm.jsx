@@ -37,24 +37,25 @@ function SingleAtm(){
     },[state.result,state.terminalId])
  return(
     <div className="single">
-        <Link to='/'><p  id="logout"> <PersonIcon /></p></Link>
+        <Link to='/'><p  id="logout"><PersonIcon /><span>logout</span></p></Link>
+       
         <h2>{names[atmTerminal]}</h2>
         <div className="singleAtm">
-        <div className="single_left">
-            <h2>Fitness Status</h2>
-            {atmCondition.length>0? <DetailStatus detail={atmCondition[0]} />
-            :<p></p>}      
-        </div>
-        <div className="single_middle">
-          <h2>Supply Status</h2>
-           {atmCondition.length>0? <DetailStatus detail={atmCondition[1]} />
-            :<p></p>}
-        </div>
-        {/* <div className="single_right">
-         <h2>Sensor Status</h2>
-          {atmCondition.length>0? <DetailStatus detail={atmCondition[2]} />
-            :<p></p>}
-        </div> */}
+            <div className="single_left">
+                <h2>Fitness Status</h2>
+                {atmCondition.length>0? <DetailStatus detail={atmCondition[0]} />
+                :<p></p>}      
+            </div>
+            <div className="single_middle">
+            <h2>Supply tatus</h2>
+            {atmCondition.length>0? <DetailStatus detail={atmCondition[1]} />
+                :<p></p>}
+            </div>
+            {/* <div className="single_right">
+            <h2>Sensor Status</h2>
+            {atmCondition.length>0? <DetailStatus detail={atmCondition[2]} />
+                :<p></p>}
+            </div> */}
     </div>
     
     </div>
